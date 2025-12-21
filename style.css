@@ -390,79 +390,55 @@ body {
     box-shadow: var(--glow-subtle);
 }
 
-/* Hero Crystal */
-.hero-crystal-container {
+/* Hero Image */
+.hero-image-container {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fadeInUp 0.8s ease-out 0.6s both;
 }
 
-.main-crystal {
+.hero-image-frame {
     position: relative;
-    width: 300px;
+    width: 320px;
     height: 400px;
-    animation: crystalFloat 6s ease-in-out infinite;
+    animation: heroImageFloat 6s ease-in-out infinite;
 }
 
-@keyframes crystalFloat {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(2deg); }
+@keyframes heroImageFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
-.crystal-face {
-    position: absolute;
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(0, 212, 255, 0.05) 100%);
-    border: 1px solid rgba(0, 212, 255, 0.3);
-    backdrop-filter: blur(5px);
-}
-
-.face-1 {
+.hero-profile-image-container {
     width: 100%;
     height: 100%;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 212, 255, 0.02) 100%);
+    border: 1px solid var(--border-crystal);
 }
 
-.face-2 {
-    width: 80%;
-    height: 80%;
-    top: 10%;
-    left: 10%;
-    clip-path: polygon(50% 5%, 95% 27%, 95% 73%, 50% 95%, 5% 73%, 5% 27%);
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, transparent 100%);
-    animation: pulse 3s ease-in-out infinite;
+.hero-profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: brightness(1.05) contrast(1.05);
+    transition: all 0.4s ease;
 }
 
-.face-3 {
-    width: 60%;
-    height: 60%;
-    top: 20%;
-    left: 20%;
-    clip-path: polygon(50% 10%, 90% 30%, 90% 70%, 50% 90%, 10% 70%, 10% 30%);
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, transparent 100%);
-    animation: pulse 3s ease-in-out infinite 0.5s;
+.hero-image-frame:hover .hero-profile-image {
+    transform: scale(1.05);
+    filter: brightness(1.1) contrast(1.1);
 }
 
-.crystal-inner-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(circle, rgba(0, 212, 255, 0.4) 0%, transparent 70%);
-    border-radius: 50%;
-    animation: innerGlow 2s ease-in-out infinite;
+.hero-image-frame .frame-corner {
+    box-shadow: var(--glow-subtle);
 }
 
-@keyframes pulse {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
-}
-
-@keyframes innerGlow {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
-    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+.hero-image-frame:hover .frame-corner {
+    box-shadow: var(--glow-intense);
 }
 
 /* Section Styles */
@@ -594,9 +570,11 @@ section {
 .image-frame {
     position: relative;
     width: 100%;
-    max-width: 350px;
-    aspect-ratio: 3/4;
+    max-width: 400px;
+    aspect-ratio: 1/1;
     margin-left: auto;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(3, 7, 18, 0.9) 100%);
+    border: 1px solid var(--border-crystal);
 }
 
 .frame-corner {
@@ -643,20 +621,25 @@ section {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background: radial-gradient(ellipse at center, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
 }
 
 .profile-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    filter: brightness(1.05) contrast(1.05);
-    transition: all 0.3s ease;
+    object-fit: contain;
+    object-position: center;
+    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
+    transition: all 0.4s ease;
 }
 
 .image-frame:hover .profile-image {
-    transform: scale(1.05);
-    filter: brightness(1.1) contrast(1.1);
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.5));
 }
 
 .frame-scanline {
@@ -978,13 +961,13 @@ section {
         justify-content: center;
     }
 
-    .hero-crystal-container {
+    .hero-image-container {
         margin-top: 40px;
     }
 
-    .main-crystal {
-        width: 200px;
-        height: 280px;
+    .hero-image-frame {
+        width: 250px;
+        height: 320px;
     }
 
     .about-content {
