@@ -69,6 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalClose = document.getElementById('modalClose');
 
     const modalContent = {
+        store: {
+            icon: '📱',
+            title: 'NOT_AVAILABLE',
+            message: 'This app is no longer available on the App Store or Google Play.'
+        },
         source: {
             icon: '🔒',
             title: 'PRIVATE_REPOSITORY',
@@ -81,43 +86,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Handle project link clicks
-    document.querySelectorAll('.project-link[href="#"]').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const type = this.getAttribute('data-type');
-            const content = modalContent[type];
-            
-            if (content) {
-                modalIcon.textContent = content.icon;
-                modalTitle.textContent = content.title;
-                modalMessage.textContent = content.message;
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
+    if (modal && modalClose) {
+        // Handle project link clicks
+        document.querySelectorAll('.project-link[href="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const type = this.getAttribute('data-type');
+                const content = modalContent[type];
+                
+                if (content) {
+                    modalIcon.textContent = content.icon;
+                    modalTitle.textContent = content.title;
+                    modalMessage.textContent = content.message;
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // Close modal
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
             }
         });
-    });
 
-    // Close modal
-    modalClose.addEventListener('click', () => {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    });
-
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-
-    // Close modal with Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
 
     // Navigation background on scroll
     const nav = document.querySelector('.nav');

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfterDark | Seve Jyron Usero</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="crystal-bg">
+        <div class="crystal crystal-1"></div>
+        <div class="crystal crystal-2"></div>
+        <div class="crystal crystal-3"></div>
+        <div class="crystal crystal-4"></div>
+        <div class="crystal crystal-5"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-bracket">[</span>SJU<span class="logo-bracket">]</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html#projects" class="nav-link">← BACK</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="project-detail">
+        <div class="section-container">
+            <header class="project-detail-header">
+                <span class="section-number">//001</span>
+                <h1 class="project-detail-title">AFTERDARK</h1>
+                <p class="project-detail-tagline">Dating + social + community — swipe to connect, share on a feed, chat, discover nearby, and organize through groups &amp; events.</p>
+                <div class="project-detail-links">
+                    <a href="https://play.google.com/store/apps/details?id=com.afterdark.app" target="_blank" class="project-link" data-type="android">ANDROID</a>
+                    <a href="https://apps.apple.com/us/app/afterdark-society/id6753719019" target="_blank" class="project-link" data-type="ios">IOS</a>
+                    <a href="https://afterdarksociety.com" target="_blank" class="project-link" data-type="web">WEB</a>
+                </div>
+            </header>
+
+            <div class="project-detail-hero">
+                <div class="project-detail-image-frame">
+                    <div class="frame-corner fc-tl"></div>
+                    <div class="frame-corner fc-tr"></div>
+                    <div class="frame-corner fc-bl"></div>
+                    <div class="frame-corner fc-br"></div>
+                    <img src="../assets/projects/afterdark.png" alt="AfterDark app — Meet, Feed, and Nearby screens" class="project-detail-image">
+                    <div class="frame-scanline"></div>
+                </div>
+            </div>
+
+            <section class="project-detail-section">
+                <h2 class="project-detail-section-title">OVERVIEW</h2>
+                <div class="text-block">
+                    <div class="block-indicator"></div>
+                    <p>
+                        AfterDark is a society-focused social and dating app built around five main tabs:
+                        <strong>Meet</strong>, <strong>Nearby</strong>, <strong>Feed</strong>, <strong>Messages</strong>, and <strong>Society</strong>.
+                        Users build a profile, verify their age, set interests, and explore connections through swiping,
+                        map-based discovery, a social timeline, real-time chat, and community groups &amp; events —
+                        with age verification, moderation, and subscription options built in.
+                    </p>
+                </div>
+            </section>
+
+            <section class="project-detail-section">
+                <h2 class="project-detail-section-title">TECH_STACK</h2>
+                <div class="project-tech project-tech--wide">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Dart</span>
+                    <span class="tech-tag">Firebase Auth</span>
+                    <span class="tech-tag">Cloud Firestore</span>
+                    <span class="tech-tag">Firebase Storage</span>
+                    <span class="tech-tag">FCM Push</span>
+                    <span class="tech-tag">Google Maps</span>
+                    <span class="tech-tag">In-App Purchases</span>
+                    <span class="tech-tag">Stripe</span>
+                    <span class="tech-tag">i18n (EN / ES)</span>
+                </div>
+            </section>
+
+            <section class="project-detail-section">
+                <h2 class="project-detail-section-title">CORE_EXPERIENCE</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <span class="feature-tab">MEET</span>
+                        <p>Swipe deck with pass, like, and spark. Match celebrations, filters, daily limits, rewind passes, pre-chat safety gate, and matches list.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-tab">NEARBY</span>
+                        <p>Google Maps discovery with manual check-in, marker previews, list view, visibility controls, and required safety consent before first use.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-tab">FEED</span>
+                        <p>For You, Latest, and Following feeds. Posts with polls, comments, reactions, bookmarks, tags, trending, and group content mixed in.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-tab">STORIES</span>
+                        <p>Create image/text stories with editors, full-screen playback, close friends, daily limits, highlights, and share-post-to-story.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-tab">MESSAGES</span>
+                        <p>1:1 and group chat with GIFs, pinned messages, typing indicators, likes inbox, message requests, screenshot detection, and spark-gated DMs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-tab">SOCIETY</span>
+                        <p>Groups with feeds, chat, sub-groups, join screening, and itinerary tools. Events with RSVP, discovery, and calendar integration.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-detail-section">
+                <h2 class="project-detail-section-title">PLATFORM_FEATURES</h2>
+                <div class="feature-list-grid">
+                    <div class="feature-list-block">
+                        <h3>Auth &amp; Onboarding</h3>
+                        <ul>
+                            <li>Email login, register, and password recovery</li>
+                            <li>Multi-step age verification (ID check)</li>
+                            <li>Guided setup — photos, interests, preferences</li>
+                            <li>Device session management &amp; account deletion</li>
+                        </ul>
+                    </div>
+                    <div class="feature-list-block">
+                        <h3>Profile</h3>
+                        <ul>
+                            <li>Photos, bio, prompts, links, and preferences</li>
+                            <li>Follow / unfollow and social stats</li>
+                            <li>24h availability status &amp; similar-status discovery</li>
+                            <li>Featured posts, story highlights, Infinity badge</li>
+                        </ul>
+                    </div>
+                    <div class="feature-list-block">
+                        <h3>Monetization</h3>
+                        <ul>
+                            <li>Infinity subscription with in-app purchase sync</li>
+                            <li>Post-onboarding trial promos</li>
+                            <li>Referral program with invite codes &amp; rewards</li>
+                            <li>Affiliate tiers and partner dashboard</li>
+                        </ul>
+                    </div>
+                    <div class="feature-list-block">
+                        <h3>Safety &amp; Moderation</h3>
+                        <ul>
+                            <li>Report content, block users, and strike system</li>
+                            <li>NSFW content filter and Safety Center</li>
+                            <li>Emergency help resources</li>
+                            <li>Screenshot detection in chats</li>
+                        </ul>
+                    </div>
+                    <div class="feature-list-block">
+                        <h3>App Infrastructure</h3>
+                        <ul>
+                            <li>Five-tab navigation with global search</li>
+                            <li>Notifications inbox with deep links</li>
+                            <li>Version gate, offline indicator, light/dark theme</li>
+                            <li>In-app tutorials and full EN / ES localization</li>
+                        </ul>
+                    </div>
+                    <div class="feature-list-block">
+                        <h3>Settings &amp; Support</h3>
+                        <ul>
+                            <li>Subscription &amp; billing history</li>
+                            <li>Notification preferences (20+ event types)</li>
+                            <li>Help center, feedback with attachments</li>
+                            <li>Download my data &amp; legal docs</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="project-detail-footer">
+                <a href="../index.html#projects" class="btn btn-outline">
+                    <span class="btn-text">← ALL PROJECTS</span>
+                    <span class="btn-corners">
+                        <span class="corner tl"></span>
+                        <span class="corner tr"></span>
+                        <span class="corner bl"></span>
+                        <span class="corner br"></span>
+                    </span>
+                </a>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-line"></div>
+            <p class="footer-text">
+                <span class="footer-symbol">◇</span>
+                DESIGNED &amp; BUILT BY SEVE JYRON USERO
+                <span class="footer-symbol">◇</span>
+            </p>
+            <p class="footer-year">© 2024</p>
+        </div>
+    </footer>
+
+    <script src="../function.js"></script>
+</body>
+</html>

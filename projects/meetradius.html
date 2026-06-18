@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeetRadius | Seve Jyron Usero</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="crystal-bg">
+        <div class="crystal crystal-1"></div>
+        <div class="crystal crystal-2"></div>
+        <div class="crystal crystal-3"></div>
+        <div class="crystal crystal-4"></div>
+        <div class="crystal crystal-5"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-bracket">[</span>SJU<span class="logo-bracket">]</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html#projects" class="nav-link">← BACK</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="project-detail">
+        <div class="section-container">
+            <header class="project-detail-header">
+                <span class="section-number">//003</span>
+                <h1 class="project-detail-title">MEETRADIUS</h1>
+                <p class="project-detail-tagline">Local meetups, not endless feeds. — discover, join, and meet nearby within your radius.</p>
+                <div class="project-detail-links">
+                    <a href="#" class="project-link" data-type="store">ANDROID</a>
+                    <a href="#" class="project-link" data-type="store">IOS</a>
+                </div>
+            </header>
+
+            <div class="project-detail-hero">
+                <div class="project-detail-image-frame">
+                    <div class="frame-corner fc-tl"></div>
+                    <div class="frame-corner fc-tr"></div>
+                    <div class="frame-corner fc-bl"></div>
+                    <div class="frame-corner fc-br"></div>
+                    <img src="../assets/projects/meetradius.png" alt="MeetRadius — feed, activity, and messages screens" class="project-detail-image">
+                    <div class="frame-scanline"></div>
+                </div>
+            </div>
+
+            <section class="project-detail-section">
+                <h2 class="project-detail-section-title">OVERVIEW</h2>
+                <div class="text-block">
+                    <div class="block-indicator"></div>
+                    <p>
+                        MeetRadius is a location-first social app for hosting and joining nearby real-world
+                        activities. Users find meetups within a configurable discovery radius (default
+                        <strong>15 miles</strong>), join groups, coordinate in chat, check in on arrival,
+                        and share moments — anchored to local discovery rather than a global endless feed.
+                    </p>
+                </div>
+            </section>
+
+            <section class="project-detail-section">
+                <h2 class="project-detail-section-title">TECH_STACK</h2>
+                <div class="project-tech project-tech--wide">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Dart</span>
+                    <span class="tech-tag">BLoC / Cubit</span>
+                    <span class="tech-tag">Firebase Auth</span>
+                    <span class="tech-tag">Cloud Firestore</span>
+                    <span class="tech-tag">Cloud Functions</span>
+                    <span class="tech-tag">Firebase Storage</span>
+                    <span class="tech-tag">FCM Push</span>
+                    <span class="tech-tag">Google Maps</span>
+                    <span class="tech-tag">go_router</span>
+                </div>
+            </section>
+
+            <section class="project-detail-section">
+                <h2 class="project-detail-section-title">CORE_FEATURES</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <span class="feature-tab">FEED</span>
+                        <p>Browse live and upcoming activities near you — filter by category and phase, with Near, Following, and For You tabs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-tab">MAP</span>
+                        <p>View activities on a map within your discovery radius — see what's happening around you at a glance.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-tab">ACTIVITIES</span>
+                        <p>Host meetups with time, place, category, and capacity — or join, edit, end, or leave existing ones.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-tab">CHAT</span>
+                        <p>Group chat per activity for coordination, plus direct messages between users.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-tab">CHECK-IN</span>
+                        <p>Check in at the meeting spot on arrival — weekly streak tracked on your profile.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-tab">MOMENTS</span>
+                        <p>Share photo moments tied to activities and build a lightweight social graph.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-detail-section">
+                <h2 class="project-detail-section-title">PLATFORM</h2>
+                <div class="feature-list-grid">
+                    <div class="feature-list-block">
+                        <h3>Location &amp; Discovery</h3>
+                        <ul>
+                            <li>Discovery anchor via GPS or manual city/ZIP</li>
+                            <li>~15 mile radius for feed and map results</li>
+                            <li>Follow users and see activities outside your radius</li>
+                        </ul>
+                    </div>
+                    <div class="feature-list-block">
+                        <h3>Social &amp; Profile</h3>
+                        <ul>
+                            <li>Follow users, invite friends, and see connections</li>
+                            <li>Profile with display name, photo, gallery, and streak badge</li>
+                            <li>Push notifications with deep links into activities and chats</li>
+                        </ul>
+                    </div>
+                    <div class="feature-list-block">
+                        <h3>Auth &amp; Navigation</h3>
+                        <ul>
+                            <li>Email/password and Google Sign-In with verification</li>
+                            <li>Four tabs: Feed, Map, Chats, and Menu</li>
+                            <li>Device session management and app_links deep linking</li>
+                        </ul>
+                    </div>
+                    <div class="feature-list-block">
+                        <h3>Safety &amp; Settings</h3>
+                        <ul>
+                            <li>Block users, report content, and blocked users list</li>
+                            <li>GPS vs manual location, theme preferences</li>
+                            <li>Account center, terms/privacy, and in-app help/FAQ</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="project-detail-footer">
+                <a href="../index.html#projects" class="btn btn-outline">
+                    <span class="btn-text">← ALL PROJECTS</span>
+                    <span class="btn-corners">
+                        <span class="corner tl"></span>
+                        <span class="corner tr"></span>
+                        <span class="corner bl"></span>
+                        <span class="corner br"></span>
+                    </span>
+                </a>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-line"></div>
+            <p class="footer-text">
+                <span class="footer-symbol">◇</span>
+                DESIGNED &amp; BUILT BY SEVE JYRON USERO
+                <span class="footer-symbol">◇</span>
+            </p>
+            <p class="footer-year">© 2024</p>
+        </div>
+    </footer>
+
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <div class="modal-icon" id="modalIcon"></div>
+            <h3 class="modal-title" id="modalTitle"></h3>
+            <p class="modal-message" id="modalMessage"></p>
+            <button class="modal-close" id="modalClose">UNDERSTOOD</button>
+        </div>
+    </div>
+
+    <script src="../function.js"></script>
+</body>
+</html>
