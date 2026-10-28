@@ -2,6 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/13.1.0/firebas
 import {
     getFirestore,
     doc,
+    getDoc,
     setDoc,
     increment,
     serverTimestamp
@@ -19,22 +20,40 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const visitKey = "sju-visit";
+const summaryRef = doc(db, "stats", "summary");
 
-async function trackVisit() {
-    if (sessionStorage.getItem(visitKey)) {
+function showVisits(count) {
+    const container = document.getElementById("visit-count");
+    const value = document.getElementById("visit-count-value");
+    const label = document.getElementById("visit-count-label");
+    if (!container || !value || !label || typeof count !== "number") {
         return;
     }
 
-    await setDoc(
-        doc(db, "stats", "summary"),
-        {
-            visits: increment(1),
-            updatedAt: serverTimestamp()
-        },
-        { merge: true }
-    );
+    value.textContent = count.toLocaleString();
+    label.textContent = count === 1 ? "VISIT" : "VISITS";
+    container.hidden = false;
+}
 
-    sessionStorage.setItem(visitKey, "1");
+async function trackVisit() {
+    if (!sessionStorage.getItem(visitKey)) {
+        await setDoc(
+            summaryRef,
+            {
+                visits: increment(1),
+                updatedAt: serverTimestamp()
+            },
+            { merge: true }
+        );
+        sessionStorage.setItem(visitKey, "1");
+    }
+
+    if (!document.getElementById("visit-count")) {
+        return;
+    }
+
+    const snapshot = await getDoc(summaryRef);
+    showVisits(snapshot.exists() ? snapshot.data().visits : 0);
 }
 
 trackVisit().catch((error) => {

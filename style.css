@@ -154,9 +154,35 @@ body {
     text-shadow: var(--glow-subtle);
 }
 
+.nav-end {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
 .nav-links {
     display: flex;
     gap: 40px;
+}
+
+.nav-visits {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 7px 12px;
+    border: 1px solid var(--border-crystal);
+    background: rgba(3, 7, 18, 0.55);
+    font-family: var(--font-display);
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.nav-visits #visit-count-value {
+    color: var(--crystal-primary);
+    text-shadow: var(--glow-subtle);
 }
 
 .nav-link {
@@ -1180,6 +1206,10 @@ section {
 @media (max-width: 768px) {
     .nav {
         padding: 15px 20px;
+    }
+
+    .nav-end {
+        gap: 0;
     }
 
     .nav-links {
